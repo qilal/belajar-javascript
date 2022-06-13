@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -99,15 +99,23 @@
         <div class="slide fade">
             <img src="gambar/IMG20200808165418.jpg" alt="gambar2" style="width: 100%;">
         </div>
-        <div class="slide fade">
-            <img src="gambar/IMG-20200808-WA0023.jpg" alt="gambar3" style="width: 100%;">
-        </div>
-    </div>
-    <div  style="text-align: center;">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
+          <!-- <div style="text-align: center;">
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div> -->
+          <div class="slide fade" style="margin-bottom: 5px;">
+              <img src="gambar/IMG-20200808-WA0027.jpg" alt="gambar3" style="width: 100%;">
+          </div>
+              <div class="slide fade" style="margin-bottom: 5px;">
+                <img src="gambar/IMG-20200808-WA0029.jpg" alt="gambar3" style="width: 100%;">
+              </div>
+              <div  style="text-align: center;">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+              </div>
+
 </body>
 <script>
 // let slideindex=0;
@@ -133,7 +141,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-//   setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
 
