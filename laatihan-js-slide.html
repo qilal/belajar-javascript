@@ -29,7 +29,7 @@
     <style>
         * {box-sizing: border-box;}
         body {font-family: Verdana, sans-serif;}
-        .slide {display: none;}
+        .slide, .slide-a {display: none;}
         img {vertical-align: middle;}
         
         /* Slideshow container */
@@ -60,7 +60,7 @@
         }
         
         /* The dots/bullets/indicators */
-        .dot {
+        .dot, .dot-a {
           height: 15px;
           width: 15px;
           margin: 0 2px;
@@ -101,30 +101,26 @@
             </div>
 
             <div style="text-align: center;">
-              <span class="dot"></span>
-              <span class="dot"></span>
+              <span id="dot" class="dot"></span>
+              <span id="dot" class="dot"></span>
             </div>
             
         </div>
 
         <div  class="slideshow-container" style="margin-top: 50px;">
-              <div class="slide fade">
                   <img src="gambar/IMG-20200808-WA0029.jpg" alt="gambar3" style="width: 100%;">
               </div>
-              <div class="slide fade">
+              <div class="slide-a fade">
                   <img src="gambar/IMG-20200808-WA0027.jpg" alt="gambar3" style="width: 100%;">
               </div>
 
               <div  style="text-align: center;">
-                <span class="dot"></span>
-                <span class="dot"></span>
               </div>
 
         </div>
 
 
-
-
+        
 </body>
 <script>
 // let slideindex=0;
@@ -133,13 +129,15 @@
 //     slide =document.getElementByIdclasname("slide")
 // }
 let slideIndex = 0;
-showSlides();
+showSlides1();
+showSlides2();
 
-function showSlides() {
+function showSlides1() {
   let i;
   let slides = document.getElementsByClassName("slide");
-  let dots = document.getElementsByClassName("dot");
+  let dots = document.getElementsByIdClassName("dot");
   console.log(slides.length);
+
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
@@ -151,6 +149,23 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+function showSlide2() {
+    let slides = document.getElementsByClassName("slide-a")
+    let dots = document.getElemnntsByClassName("dot-a")
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].stlye.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0;i < dots.length;i++) {
+      dots[i].className = dots[i].className.replace("active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += "active";
+    setTimeout(showSlides, 2000);
+
 }
 </script>
 
