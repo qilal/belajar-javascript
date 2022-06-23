@@ -38,6 +38,12 @@
           position: relative;
           margin: auto;
         }
+
+        .slideshow-container1 {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
         
         /* Caption text */
         .text {
@@ -107,7 +113,8 @@
             
         </div>
 
-        <div  class="slideshow-container" style="margin-top: 50px;">
+        <div  class="slideshow-container1" style="margin-top: 50px;">
+              <div>
                   <img src="gambar/IMG-20200808-WA0029.jpg" alt="gambar3" style="width: 100%;">
               </div>
               <div class="slide-a fade">
@@ -116,7 +123,7 @@
 
               <div  style="text-align: center;">
               </div>
-
+              
         </div>
 
 
@@ -129,6 +136,8 @@
 //     slide =document.getElementByIdclasname("slide")
 // }
 let slideIndex = 0;
+let slideIndex2 = 0;
+
 showSlides1();
 showSlides2();
 
@@ -152,19 +161,19 @@ function showSlides1() {
 }
 function showSlide2() {
     let slides = document.getElementsByClassName("slide-a")
-    let dots = document.getElemnntsByClassName("dot-a")
+    let dots = document.getElementsByClassName("dot-a")
 
     for (i = 0; i < slides.length; i++) {
       slides[i].stlye.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    for (i = 0;i < dots.length;i++) {
-      dots[i].className = dots[i].className.replace("active", "");
+    slideIndex2++;
+    if (slideIndex2 > slides.length) {slideIndex2 = 1}
+    for (i = 0;i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += "active";
-    setTimeout(showSlides, 2000);
+    slides[slideIndex2-1].style.display = "block";
+    dots[slideIndex2-1].className += " active";
+    setTimeout(showSlides2, 2000);
 
 }
 </script>
