@@ -42,7 +42,7 @@
         .slideshow-container1 {
           max-width: 1000px;
           position: relative;
-          margin: auto;
+          margin-top: 50px;
         }
         
         /* Caption text */
@@ -107,8 +107,8 @@
             </div>
 
             <div style="text-align: center;">
-              <span id="dot" class="dot"></span>
-              <span id="dot" class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
             </div>
             
         </div>
@@ -122,8 +122,8 @@
               </div>
 
               <div  style="text-align: center;">
-                <span id="dot" class="dot-a"></span>
-                <span id="dot" class="dot-a"></span>
+                <span class="dot-a"></span>
+                <span class="dot-a"></span>
               </div>
 
         </div>
@@ -146,7 +146,7 @@ showSlides2();
 function showSlides1() {
   let i;
   let slides = document.getElementsByClassName("slide");
-  let dots = document.getElementsByClassClassName("dot");
+  let dots = document.getElementsByClassName("dot");
   console.log(slides.length);
 
   for (i = 0; i < slides.length; i++) {
@@ -161,12 +161,12 @@ function showSlides1() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides1, 2000); // Change image every 2 seconds
 }
-function showSlide2() {
-    let slides = document.getElementsByClassName("slide-a")
-    let dots = document.getElementsByClassName("dot-a")
+function showSlides2() {
+    let slides = document.getElementsByClassName("slide-a");
+    let dots = document.getElementsByClassName("dot-a"); 
 
     for (i = 0; i < slides.length; i++) {
-      slides[i].stlye.display = "none";
+      slides[i].style.display = "none";
     }
     slideIndex2++;
     if (slideIndex2 > slides.length) {slideIndex2 = 1}
