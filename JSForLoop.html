@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">world</p>
+    <script>
+        const car = ["BMW", "Volvo", "Saab", "Ford", "fiat", "Audi"];
+
+        let text ="world";
+        for (let i = 0; i < car.length; i++) {
+            text += car[i]+"<br>";
+        }
+        var paragraph = document.getElementById("demo");
+        paragraph.innerText = paragraph.innerText + paragraph.innerText;
+        // document.getElementById("demo").innerHTML= text;
+    </script>
+</body>
+</html>
